@@ -84,3 +84,8 @@ or students.last_name = 'Williams'
 or students.last_name = 'Johnson' 
 ORDER BY groups.name, students.last_name 
 ;
+
+select count(students.id) as Кількість_студентів, name as Назва_групи
+from students
+INNER JOIN groups ON (groups.id = students.group_id)
+GROUP BY name;
